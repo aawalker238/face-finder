@@ -56,12 +56,14 @@ class App extends Component {
     });
 
     axios
-      .post('http://localhost:3001/imageurl', { input: this.state.userInput })
+      .post('https://facefinderapp.herokuapp.com/imageurl', {
+        input: this.state.userInput
+      })
       .then(({ data }) => data)
       .then(response => {
         if (response) {
           axios
-            .post('http://localhost:3001/image', {
+            .post('https://facefinderapp.herokuapp.com/image', {
               id: this.state.user.id
             })
             .then(({ data: count }) => {

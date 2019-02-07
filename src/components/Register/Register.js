@@ -14,7 +14,7 @@ class Register extends Component {
 
   onRegister = () => {
     axios
-      .post('http://localhost:3001/register', {
+      .post('https://facefinderapp.herokuapp.com/register', {
         email: this.state.email,
         password: this.state.password,
         name: this.state.name
